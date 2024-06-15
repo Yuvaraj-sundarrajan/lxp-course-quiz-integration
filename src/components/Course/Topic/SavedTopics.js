@@ -303,6 +303,11 @@ export default function SavedTopics(props) {
                                 <div>
                                     <EditIcon style={{ marginRight: 16 }} variant="outlined" onClick={() => handleEditClickOpen(topic.topicId)} />
                                     <DeleteIcon onClick={() => handleDeleteClickOpen(topic.topicId)} /></div></div>
+                                            {/* added button for quiz teams */}
+                                            <button class="btn-link" style={{ marginLeft: '250px' }} onClick={()=>{handleAddFeedBackButton(topic.topicId)}}>Add  Feedback</button>
+<button class="btn-link" style={{ marginLeft: '250px' }} onClick={()=>{handleAddQuizFeedBackButton(topic.topicId)}}>Add Quiz Feedback</button>
+ 
+<button class="btn-link" style={{ marginLeft: '250px' }} onClick={()=>{handleAddQuizButton(topic.topicId)}}>Add Quiz</button> 
                             {/* <DeleteIcon onClick={() => handleDelete(topic.topicId)} /></div></div> */}
 
                         </AccordionSummary>
@@ -317,11 +322,7 @@ export default function SavedTopics(props) {
                             </ul>
 
                             <Link style={{ marginLeft: '250px' }} to={`/addcontent/${topic.topicId}`}>Add Content</Link>
-                            {/* <Button onClick={handleNavigate(topic.topicId)} >Add Content</Button> */}                              {/* added button for quiz teams */}
-                            <button class="btn-link" style={{ marginLeft: '250px' }} onClick={()=>{handleAddFeedBackButton(topic.topicId)}}>Add  Feedback</button>
-<button class="btn-link" style={{ marginLeft: '250px' }} onClick={()=>{handleAddQuizFeedBackButton(topic.topicId)}}>Add Quiz Feedback</button>
- 
-<button class="btn-link" style={{ marginLeft: '250px' }} onClick={()=>{handleAddQuizButton(topic.topicId)}}>Add Quiz</button> 
+                            {/* <Button onClick={handleNavigate(topic.topicId)} >Add Content</Button> */}                             
                         </AccordionDetails>
 
                     </Accordion>
